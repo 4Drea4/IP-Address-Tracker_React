@@ -18,3 +18,8 @@ export type SearchBarProps = {
     loading: boolean;
     error:string | null;
 }
+
+//search results
+export type SearchResultsProps ={
+    data: IpData | null;
+};

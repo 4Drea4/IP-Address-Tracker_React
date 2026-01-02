@@ -2,6 +2,7 @@ import {  useState } from 'react'
 import { useIpData } from './hooks/useIpData';
 import './App.css'
 import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
 
 function App() {
   const [ip, setIp] =useState("");
@@ -22,7 +23,7 @@ function handleSubmit(ipValue:string){
       loading={loading}
       error={error}
     />
-      
+      <SearchResults data={data}/>
    
     </div>
   ) 
