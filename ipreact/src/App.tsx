@@ -1,29 +1,29 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import { useIpData } from './hooks/useIpData';
 import './App.css'
-
+import SearchBar from './components/SearchBar';
 
 function App() {
+  const [ip, setIp] =useState("");
   const {data, loading,error, search} =useIpData();
 
- useEffect(() => {
-  search("8.8.8.8");
- }, []);
-
-  useEffect(() => {
-    console.log("loading", loading);
-    console.log("error", error);
-    console.log("data",data);
-  },[loading,error,data]);
-
+function handleSubmit(ipValue:string){
+  console.log("submitted ip - works", ipValue);
+  search(ipValue);
+}
 
   return (
     <div>
-      <h1>Testing custom hooks</h1>
-      {loading && <p>Loading..</p>}
-      {error && <p>{error}</p>}
-      {data && <pre>{JSON.stringify(data, null,2)}</pre>}
-      <h1>Ip Tracker</h1>
+      <h1>IP Address</h1>
+      <SearchBar
+      ip={ip}
+      setIp={setIp}
+      onSubmit={handleSubmit}
+      loading={loading}
+      error={error}
+    />
+      
+   
     </div>
   ) 
 }
