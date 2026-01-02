@@ -10,3 +10,11 @@ lng: number;
     isp: string;
     location: IpLocation;
  }
+//search bar
+type SearchBarProps = {
+    ip: string;
+    setIp: (value:string) => void;
+    onSubmit: ()=> void;
+    loading: boolean;
+    error:string | null;
+}

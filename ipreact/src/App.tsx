@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { getIpInfo } from './api/ip';
 import { useIpData } from './hooks/useIpData';
 import './App.css'
+
 
 function App() {
   const {data, loading,error, search} =useIpData();
