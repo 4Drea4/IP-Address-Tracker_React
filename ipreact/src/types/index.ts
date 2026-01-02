@@ -11,10 +11,10 @@ lng: number;
     location: IpLocation;
  }
 //search bar
-type SearchBarProps = {
+export type SearchBarProps = {
     ip: string;
     setIp: (value:string) => void;
-    onSubmit: ()=> void;
+    onSubmit: (ip:string)=> void;
     loading: boolean;
     error:string | null;
 }
