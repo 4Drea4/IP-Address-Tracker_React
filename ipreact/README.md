@@ -24,3 +24,6 @@ The IP Address Tracker uses the IP Geolocation API by IPify. Users are able to:
  #### Challenges Faced
  #### Solutions Implemented
  #### Potential Improvements
+
+
+ [Resources for a work around](https://www.youtube.com/watch?v=15CG6e5PLD4)

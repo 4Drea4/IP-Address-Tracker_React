@@ -1,23 +1,28 @@
 import { useEffect, useState } from 'react'
 import { getIpInfo } from './api/ip';
+import { useIpData } from './hooks/useIpData';
 import './App.css'
 
 function App() {
+  const {data, loading,error, search} =useIpData();
+
  useEffect(() => {
-  async function testApi(){
-    try{
-      const result = await getIpInfo("8.8.8.8");
-      console.log("Api", result);
-    }
-    catch (err) {
-      console.error("Api test", err)
-    }
-  }
-  testApi();
-}, []);
-  
+  search("8.8.8.8");
+ }, []);
+
+  useEffect(() => {
+    console.log("loading", loading);
+    console.log("error", error);
+    console.log("data",data);
+  },[loading,error,data]);
+
+
   return (
     <div>
+      <h1>Testing custom hooks</h1>
+      {loading && <p>Loading..</p>}
+      {error && <p>{error}</p>}
+      {data && <p>{data}</p>}
       <h1>Ip Tracker</h1>
     </div>
   ) 
