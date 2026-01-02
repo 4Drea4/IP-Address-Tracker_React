@@ -22,7 +22,7 @@ function App() {
       <h1>Testing custom hooks</h1>
       {loading && <p>Loading..</p>}
       {error && <p>{error}</p>}
-      {data && <p>{data}</p>}
+      {data && <pre>{JSON.stringify(data, null,2)}</pre>}
       <h1>Ip Tracker</h1>
     </div>
   ) 
