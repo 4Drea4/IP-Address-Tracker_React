@@ -11,21 +11,13 @@ const defaultZoom = 10;
 const locationMarkerIcon = L.icon({
     iconUrl: locationIcon,
     iconSize: [35,35],
-    iconAnchor: [23.56]
+    iconAnchor: [23,56],
+    
 })
 export default function Map({data}:MapProps){
     const mapContainerRef = useRef<HTMLDivElement | null>(null);
     const mapRef = useRef<L.Map | null>(null);
     const markerRef = useRef<L.Marker | null>(null);
-
-    useEffect(() => {
-        L.Icon.Default.mergeOptions({
-            iconUrl: locationIcon,
-            iconSize: [35,35],
-            iconAnchor:[23,56],
-           
-        });
-    }, []);
 
 
     useEffect(() => {
