@@ -4,16 +4,13 @@ const API_KEY ="at_Dw02MjcDxw7tH0ttIuN7b1nlHrV1J";
 //I know I shouldnt do this but I cant find a way to hide this rn
 
 //fetch using async function 
-export async function getIpInfo(ip?:string): Promise<IpData>{
-   const baseUrl =`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
-
-    const url = ip && ip.trim().length > 0 ? `${baseUrl}&ipAddress=${encodeURIComponent(ip.trim())}`: baseUrl;
+export async function getIpInfo(ip:string): Promise<IpData>{
+    const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${ip}`;
     
     const res = await fetch(url);
 
      // check response and throw an error 
      if (!res.ok) {
-      const text = await res.text();
         throw new Error ('Could not get api data');
      }
      
