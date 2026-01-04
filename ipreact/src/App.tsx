@@ -11,6 +11,7 @@ function App() {
   const {data, loading,error, search} =useIpData();
 
   useEffect(()=>{
+   
     search();
   },[search]);
 
@@ -31,7 +32,10 @@ function handleSubmit(ipValue:string){
       error={error}
     />
       <SearchResults data={data}/>
+      <main>
       <Map data={data}/> 
+      </main>
+     
     </div>
   ) 
 }
