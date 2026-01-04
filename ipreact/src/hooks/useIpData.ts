@@ -10,6 +10,7 @@ import type { IpData
     const [loading, setLoading] = useState(false);
 
     async function search (ip:string){
+        console.log("is this breaking too", JSON.stringify(ip));
        setLoading(true);
        setError(null) //Reset error and make sure I set loading to true
 
@@ -17,7 +18,9 @@ import type { IpData
             const result = await getIpInfo(ip); //wait for the info from ip
             setData(result); 
         } catch (err) {
-            setError("Uh oh something is broken");
+            const message = err instanceof Error ? err.message : "Unknown error";
+            setError(message);
+           
         
         } finally {
             setLoading(false);
