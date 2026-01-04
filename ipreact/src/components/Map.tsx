@@ -5,13 +5,13 @@ import  type{ MapProps } from '../types';
 // import markerIcon from '/node_modules/leaflet/dist/images/marker-icon.png';
 import locationIcon from '../assets/icon-location.svg';
 
-const defaultCenter: [number, number] = [51.505, -0.09]
-const defaultZoom = 10;
+const defaultCenter: [number, number] = [0,0];
+const defaultZoom = 2;
 
 const locationMarkerIcon = L.icon({
     iconUrl: locationIcon,
     iconSize: [35,35],
-    iconAnchor: [23,56],
+    iconAnchor: [17,45],
     
 })
 export default function Map({data}:MapProps){
