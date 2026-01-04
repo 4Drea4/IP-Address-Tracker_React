@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getIpInfo } from "../api/ip";
-import type { IpData
- } from "../types";
+import type { IpData} from "../types";
+
 
  export function useIpData(){
     //state for error, data and loading
@@ -9,7 +9,7 @@ import type { IpData
     const [data, setData] = useState<IpData | null > (null)
     const [loading, setLoading] = useState(false);
 
-    async function search (ip:string){
+    async function search (ip?:string){
        setLoading(true);
        setError(null) //Reset error and make sure I set loading to true
 
@@ -26,5 +26,5 @@ import type { IpData
     }
     return {
         error, data, loading, search
-    }
+    };
  }
