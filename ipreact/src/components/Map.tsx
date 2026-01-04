@@ -1,7 +1,7 @@
 import {useEffect, useRef } from 'react';
 import type { IpData } from '../types';
 import L from 'leaflet';
-import { MapProps } from '../types';
+import  type{ MapProps } from '../types';
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png' ;
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -22,4 +22,21 @@ export default function Map({data}:MapProps){
         });
     }, []);
 
-}
+
+    useEffect(() => {
+        if (!mapContainerRef.current) return;
+        if (mapRef.current) return;
+
+        const map = L.map(mapContainerRef.current).setView(defaultCenter,defaultZoom);
+
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors',
+        }).addTo(map);
+
+         const marker = L.marker(defaultCenter).addTo(map);
+
+         mapRef.current = map;
+         markerRef.current = marker;
+    }, []) ;
+    }
