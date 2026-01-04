@@ -1,4 +1,4 @@
-import {  useEffect, useState } from 'react'
+import {  useEffect, useState, useRef } from 'react'
 import { useIpData } from './hooks/useIpData';
 import './App.css'
 import SearchBar from './components/SearchBar';
@@ -10,10 +10,14 @@ function App() {
   const [ip, setIp] =useState("");
   const {data, loading,error, search} =useIpData();
 
+  const hasRef = useRef(false);
+
   useEffect(()=>{
    
+    if(hasRef.current) return;
+    hasRef.current = true;
     search();
-  },[search]);
+  },[]);
 
 
 function handleSubmit(ipValue:string){
