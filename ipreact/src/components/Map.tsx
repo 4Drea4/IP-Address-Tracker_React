@@ -2,10 +2,8 @@ import {useEffect, useRef } from 'react';
 import type { IpData } from '../types';
 import L from 'leaflet';
 import  type{ MapProps } from '../types';
-import markerIcon2x from '../assets/icon-location.svg' ;
-import markerIcon from '../assets/icon-arrow.svg';
-
-
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png' ;
+import markerIcon from '/node_modules/leaflet/dist/images/marker-icon.png';
 const defaultCenter: [number, number] = [51.505, -0.09]
 const defaultZoom = 10;
 
