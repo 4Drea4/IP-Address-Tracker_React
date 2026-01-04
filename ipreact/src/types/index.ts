@@ -23,3 +23,8 @@ export type SearchBarProps = {
 export type SearchResultsProps ={
     data: IpData | null;
 };
+
+//map
+export type MapProps = {
+    data: IpData | null;
+}

@@ -33,3 +33,4 @@ I originally planned to do the UI toward the beginning but I then awitched to do
 - [Resources for a work around](https://www.youtube.com/watch?v=15CG6e5PLD4)
 - [Hiding API Key](https://stackoverflow.com/questions/48699820/how-do-i-hide-an-api-key-in-create-react-app)
 - [Set Data](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData)
+- [Former Project](https://github.com/4Drea4/IP-Address-Tracker/tree/main?tab=readme-ov-file)
