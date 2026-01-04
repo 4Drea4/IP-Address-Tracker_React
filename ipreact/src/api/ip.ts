@@ -6,12 +6,14 @@ const API_KEY ="at_Dw02MjcDxw7tH0ttIuN7b1nlHrV1J";
 //fetch using async function 
 export async function getIpInfo(ip?:string): Promise<IpData>{
    const baseUrl =`https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}`;
-    const url = ip && ip.trim() ? `${baseUrl}&ipAddress=${ip.trim()}`: baseUrl;
+
+    const url = ip && ip.trim().length > 0 ? `${baseUrl}&ipAddress=${encodeURIComponent(ip.trim())}`: baseUrl;
     
     const res = await fetch(url);
 
      // check response and throw an error 
      if (!res.ok) {
+      const text = await res.text();
         throw new Error ('Could not get api data');
      }
      
