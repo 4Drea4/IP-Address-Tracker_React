@@ -2,9 +2,9 @@ import {useEffect, useRef } from 'react';
 import type { IpData } from '../types';
 import L from 'leaflet';
 import  type{ MapProps } from '../types';
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png' ;
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+import markerIcon2x from '../assets/icon-location.svg' ;
+import markerIcon from '../assets/icon-arrow.svg';
+
 
 const defaultCenter: [number, number] = [51.505, -0.09]
 const defaultZoom = 10;
@@ -18,7 +18,7 @@ export default function Map({data}:MapProps){
         L.Icon.Default.mergeOptions({
             iconRetinaUrl: markerIcon2x,
             iconUrl: markerIcon,
-            shadowUrl: markerShadow,
+           
         });
     }, []);
 
@@ -39,4 +39,14 @@ export default function Map({data}:MapProps){
          mapRef.current = map;
          markerRef.current = marker;
     }, []) ;
+
+    useEffect(()=> {
+        if (!data) return;
+        if (!mapRef.current || !markerRef.current) return;
+
+        const {lat,lng} = data.location;
+        mapRef.current.setView([lat,lng], defaultZoom);
+        markerRef.current.setLatLng([lat,lng]);
+    },  [data]);
+    return <div ref={mapContainerRef} className='map'/>;
     }

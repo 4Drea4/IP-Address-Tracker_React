@@ -3,7 +3,7 @@ import { useIpData } from './hooks/useIpData';
 import './App.css'
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
-// import Map from './components/Map';
+import Map from './components/Map';
 
 
 function App() {
@@ -26,8 +26,7 @@ function handleSubmit(ipValue:string){
       error={error}
     />
       <SearchResults data={data}/>
-      {/* <Map data={data}/> adding so I dont forget */}
-
+      <Map data={data}/> 
     </div>
   ) 
 }
