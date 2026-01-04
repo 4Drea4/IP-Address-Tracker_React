@@ -1,6 +1,6 @@
 import type { IpData } from "../types"
 
-const API_KEY ="at_Dw02MjcDxw7tH0ttIuN7b1nlHrV1J";
+const API_KEY =import.meta.env.VITE_IPIFY_KEY;
 //I know I shouldnt do this but I cant find a way to hide this rn
 
 //fetch using async function 
