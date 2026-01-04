@@ -1,12 +1,18 @@
 import {useEffect, useRef } from 'react';
-import type { IpData } from '../types';
 import L from 'leaflet';
 import  type{ MapProps } from '../types';
-import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png' ;
-import markerIcon from '/node_modules/leaflet/dist/images/marker-icon.png';
+// import markerIcon2x from '/node_modules/leaflet/dist/images/marker-icon-2x.png' ;
+// import markerIcon from '/node_modules/leaflet/dist/images/marker-icon.png';
+import locationIcon from '../assets/icon-location.svg';
+
 const defaultCenter: [number, number] = [51.505, -0.09]
 const defaultZoom = 10;
 
+const locationMarkerIcon = L.icon({
+    iconUrl: locationIcon,
+    iconSize: [35,35],
+    iconAnchor: [23.56]
+})
 export default function Map({data}:MapProps){
     const mapContainerRef = useRef<HTMLDivElement | null>(null);
     const mapRef = useRef<L.Map | null>(null);
@@ -14,8 +20,9 @@ export default function Map({data}:MapProps){
 
     useEffect(() => {
         L.Icon.Default.mergeOptions({
-            iconRetinaUrl: markerIcon2x,
-            iconUrl: markerIcon,
+            iconUrl: locationIcon,
+            iconSize: [35,35],
+            iconAnchor:[23,56],
            
         });
     }, []);
@@ -32,7 +39,7 @@ export default function Map({data}:MapProps){
             attribution: '&copy; OpenStreetMap contributors',
         }).addTo(map);
 
-         const marker = L.marker(defaultCenter).addTo(map);
+         const marker = L.marker(defaultCenter, {icon:locationMarkerIcon,}).addTo(map);
 
          mapRef.current = map;
          markerRef.current = marker;
