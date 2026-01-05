@@ -19,7 +19,7 @@ export default function SearchResults ({data}: SearchResultsProps) {
             </div>
             <div>
                 <h3 className="label">Timezone</h3>
-                <p className="resultResponse">{data.timezone}</p>
+                <p className="resultResponse">{data.location.timezone}</p>
             </div>
             <div>
                 <h3 className="label">ISP</h3>
