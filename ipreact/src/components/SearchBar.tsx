@@ -21,7 +21,9 @@ export default function SearchBar({
         <form className="searchForm" onSubmit={handleSubmit}>
            <label htmlFor="ip-input" className="search" >Search for an IP 
            </label>
+           <div className='searches'>
            <input
+           className="searchInput"
            id="ip-input"
            value={ip}
            onChange={(e) => setIp(e.target.value)}
@@ -34,7 +36,7 @@ export default function SearchBar({
         <button className="searchButton" type="submit" disabled={loading}>
             {loading ? "..." : ">"}
         </button>
-           
+        </div>
         {error && (
             <p className="errorText" aria-live="polite">
                 {error}
