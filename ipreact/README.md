@@ -1,7 +1,7 @@
 # IP Tracker React Version
 ## Andrea E. Friday Jan. 2<sup>nd</sup> 2026
 
-- [Link to the LIVE Project ](https://4drea4.github.io/IP-Address-Tracker_React/)
+- [Link to the LIVE Project ](https://ip-address-tracker-react-tawny.vercel.app/)
 - [Link to FrontEndMentor Project](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0)
 - [Link to Leaflet](https://leafletjs.com/)
 ### Project Scope 
@@ -25,7 +25,7 @@ The IP Address Tracker uses the IP Geolocation API by IPify. Users are able to:
  #### Challenges Faced
  I have been relying heavily on "What can I make react" as my frame of mind approaching this proejct and that is where I struggled translating functionality from JS into React while still trying to having a really good understanding of what logic should go where and like how and where to manage state and even how I could make form validation work in React. Something Im currently stumped on that I may have found a solution for is hiding my API key. I ran into some issues yesterday with the way my page was re-rendering causing automatic re-renders when trying to retrieve the users IP and then I ran into bugs because my API token expired.
  #### Solutions Implemented
- I have been trying to make it a lot easier on myself by making components centered around interactions done by myself (the user) and rendering when necessary. For form validation I reused a lot of my same logic as my old project. I also will be spending a significant amount of time reading on the best options to correct my project filepath before going live.
+ I have been trying to make it a lot easier on myself by making components centered around interactions done by myself (the user) and rendering when necessary. For form validation I reused a lot of my same logic as my old project. I also will be spending a significant amount of time reading on the best options to correct my project filepath before going live. My timesavior was instead of going live with gitpages and having to undo repos etc I went with vercel and was able to customize my root folder instead.
  #### Potential Improvements
 I originally planned to do the UI toward the beginning but I then awitched to do some of the harder tasks first like creating my custom hook, and fetching the data correctly UI. I think if doing this again I would probably add more custom hooks it does seem  redundant just because this current project is so small. Working through this did help me better understand how to better plan for props and components though because recognizing what will be needed and how many times is a plus.
 
