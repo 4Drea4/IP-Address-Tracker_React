@@ -12,7 +12,7 @@ export default function SearchResults ({data}: SearchResultsProps) {
                 <p className="resultResponse">{data.ip}</p>
                 </div>
             
-            </div>
+          
             <div>
                 <h3 className="label">Location</h3>
                 <p className="resultResponse">{data.location.city}, {data.location.country}</p>
@@ -24,6 +24,7 @@ export default function SearchResults ({data}: SearchResultsProps) {
             <div>
                 <h3 className="label">ISP</h3>
                 <p className="resultResponse">{data.isp}</p>
+            </div>
             </div>
         </section>
     )
