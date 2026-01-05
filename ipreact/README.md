@@ -25,7 +25,7 @@ The IP Address Tracker uses the IP Geolocation API by IPify. Users are able to:
  #### Challenges Faced
  I have been relying heavily on "What can I make react" as my frame of mind approaching this proejct and that is where I struggled translating functionality from JS into React while still trying to having a really good understanding of what logic should go where and like how and where to manage state and even how I could make form validation work in React. Something Im currently stumped on that I may have found a solution for is hiding my API key. I ran into some issues yesterday with the way my page was re-rendering causing automatic re-renders when trying to retrieve the users IP and then I ran into bugs because my API token expired.
  #### Solutions Implemented
- I have been trying to make it a lot easier on myself by making components centered around interactions done by myself (the user) and rendering when necessary. For form validation I reused a lot of my same logic as my old project.
+ I have been trying to make it a lot easier on myself by making components centered around interactions done by myself (the user) and rendering when necessary. For form validation I reused a lot of my same logic as my old project. I also will be spending a significant amount of time reading on the best options to correct my project filepath before going live.
  #### Potential Improvements
 I originally planned to do the UI toward the beginning but I then awitched to do some of the harder tasks first like creating my custom hook, and fetching the data correctly UI. I think if doing this again I would probably add more custom hooks it does seem  redundant just because this current project is so small. Working through this did help me better understand how to better plan for props and components though because recognizing what will be needed and how many times is a plus.
 
@@ -34,3 +34,5 @@ I originally planned to do the UI toward the beginning but I then awitched to do
 - [Hiding API Key](https://stackoverflow.com/questions/48699820/how-do-i-hide-an-api-key-in-create-react-app)
 - [Set Data](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setData)
 - [Former Project](https://github.com/4Drea4/IP-Address-Tracker/tree/main?tab=readme-ov-file)
+- [Github troubles](https://www.reddit.com/r/statichosting/comments/1o5d5xr/github_pages_wont_let_me_use_a_subdirectory_and/)
+- [Potential Github Filepath fix](https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages)
