@@ -5,13 +5,9 @@ import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
 import Map from './components/Map';
 
-
 function App() {
   const [ip, setIp] =useState("");
-  const {data, loading,error, search} =useIpData();
-
-  
-
+  const {data, loading,error, search} = useIpData();
 
 function handleSubmit(ipValue:string){
   console.log("submitted ip - works", ipValue);

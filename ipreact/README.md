@@ -23,7 +23,7 @@ The IP Address Tracker uses the IP Geolocation API by IPify. Users are able to:
  - Deploy a live version 
 
  #### Challenges Faced
- I have been relying heavily on "What can I make react" as my frame of mind approaching this proejct and that is where I struggled translating functionality from JS into React while still trying to having a really good understanding of what logic should go where and like how and where to manage state and even how I could make form validation work in React. Something Im currently stumped on that I may have found a solution for is hiding my API key. 
+ I have been relying heavily on "What can I make react" as my frame of mind approaching this proejct and that is where I struggled translating functionality from JS into React while still trying to having a really good understanding of what logic should go where and like how and where to manage state and even how I could make form validation work in React. Something Im currently stumped on that I may have found a solution for is hiding my API key. I ran into some issues yesterday with the way my page was re-rendering causing automatic re-renders when trying to retrieve the users IP and then I ran into bugs because my API token expired.
  #### Solutions Implemented
  I have been trying to make it a lot easier on myself by making components centered around interactions done by myself (the user) and rendering when necessary. For form validation I reused a lot of my same logic as my old project.
  #### Potential Improvements

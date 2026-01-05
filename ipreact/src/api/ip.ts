@@ -1,7 +1,7 @@
 import type { IpData } from "../types"
 
-const API_KEY =import.meta.env.VITE_IPIFY_KEY;
-//I know I shouldnt do this but I cant find a way to hide this rn
+const API_KEY = import.meta.env.VITE_IPIFY_KEY;
+
 
 //fetch using async function 
 export async function getIpInfo(ip:string): Promise<IpData>{
