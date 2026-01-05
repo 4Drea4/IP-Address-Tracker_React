@@ -1,7 +1,7 @@
 # IP Tracker React Version
 ## Andrea E. Friday Jan. 2<sup>nd</sup> 2026
 
-- [Link to the Project ]()
+- [Link to the LIVE Project ](https://4drea4.github.io/IP-Address-Tracker_React/)
 - [Link to FrontEndMentor Project](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0)
 - [Link to Leaflet](https://leafletjs.com/)
 ### Project Scope 

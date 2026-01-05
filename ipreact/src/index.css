@@ -110,14 +110,12 @@ button:focus-visible {
     background-image: url("./assets/pattern-bg-mobile.png") ;
   
   }
-  .resultsDiv{
+  .resultsDiv .resultsSection{
     grid-template-columns: 1fr;
     gap:15px;
     text-align: center;
   }
-  .resultsSection{
-    bottom: -50px;
-  }
+  
 }
 
 
