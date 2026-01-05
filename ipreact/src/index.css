@@ -94,6 +94,15 @@ button:focus-visible {
 @media (max-width: 600px){
   .hero {
     background-image: url("./assets/pattern-bg-mobile.png") ;
+  
+  }
+  .resultsDiv{
+    grid-template-columns: 1fr;
+    gap:15px;
+    text-align: center;
+  }
+  .resultsSection{
+    bottom: -50px;
   }
 }
 
