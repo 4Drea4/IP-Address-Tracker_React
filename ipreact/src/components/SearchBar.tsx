@@ -18,7 +18,7 @@ export default function SearchBar({
 
     }
     return (
-        <form className="search" onSubmit={handleSubmit}>
+        <form className="searchForm" onSubmit={handleSubmit}>
            <label htmlFor="ip-input" className="search" >Search for an IP 
            </label>
            <input
@@ -31,12 +31,12 @@ export default function SearchBar({
            autoComplete="off"
         />
 
-        <button type="submit" disabled={loading}>
+        <button className="searchButton" type="submit" disabled={loading}>
             {loading ? "..." : ">"}
         </button>
            
         {error && (
-            <p className="error" aria-live="polite">
+            <p className="errorText" aria-live="polite">
                 {error}
             </p>
         )}
