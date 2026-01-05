@@ -60,7 +60,7 @@ button:focus-visible {
     padding: 5px;
 }
 
-ipinformation{
+.ipInfo{
   border-radius: 10px;
   display: flex;
   justify-content: center;

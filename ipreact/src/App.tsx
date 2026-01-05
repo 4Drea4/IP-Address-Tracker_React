@@ -15,8 +15,9 @@ function handleSubmit(ipValue:string){
 }
 
   return (
-    <div>
-      <h1>IP Address</h1>
+    <div className='page'>
+      <header className='hero'>
+      <h1 className='title'>IP Address</h1>
       <SearchBar
       ip={ip}
       setIp={setIp}
@@ -24,8 +25,13 @@ function handleSubmit(ipValue:string){
       loading={loading}
       error={error}
     />
+
       <SearchResults data={data}/>
-      <main>
+      </header>
+     
+     
+      
+      <main className='mapWrap'>
       <Map data={data}/> 
       </main>
      
