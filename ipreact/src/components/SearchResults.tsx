@@ -5,18 +5,21 @@ export default function SearchResults ({data}: SearchResultsProps) {
         return null;
     }
     return (
-        <section className="ipInfo">
-            <div>
-                <h3>Ip Address</h3>
-                <p>{data.ip}</p>
+        <section className="resultsSection">
+            <div className="resultsDiv">
+                <div>
+                <h3 className="label">Ip Address</h3>
+                <p className="resultResponse">{data.ip}</p>
+                </div>
+            
             </div>
             <div>
-                <h3>Location</h3>
-                <p>{data.location.city}, {data.location.country}</p>
+                <h3 className="label">Location</h3>
+                <p className="resultResponse">{data.location.city}, {data.location.country}</p>
             </div>
             <div>
-                <h3>ISP</h3>
-                <p>{data.isp}</p>
+                <h3 className="label">ISP</h3>
+                <p className="resultResponse">{data.isp}</p>
             </div>
         </section>
     )

@@ -28,8 +28,6 @@ function handleSubmit(ipValue:string){
 
       <SearchResults data={data}/>
       </header>
-     
-     
       
       <main className='mapWrap'>
       <Map data={data}/> 

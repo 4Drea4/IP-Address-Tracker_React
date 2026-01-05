@@ -12,6 +12,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 0;
 }
 
 button {
@@ -45,7 +46,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
+.hero{
+  position: relative;
+}
 .searchForm{
   position: relative;
 }
@@ -69,8 +72,61 @@ button:focus-visible {
   margin-top: 40px;
 }
 
+
 .errorText{
   margin: 10px 0 0;
   color: ffd1d1;
   font-weight: 600;
 }
+
+.map{
+  height: 100%;
+  width:100% 
+} 
+.mapWrap{
+  position:relative;
+  z-index: 1;
+}
+@media (max-width: 600px){
+  .hero {
+    background-image: url('ipreact/src/assets/pattern-bg-mobile.png') ;
+  }
+}
+
+.resultsSection{
+  position: absolute;
+  left: 50%;
+  z-index:5;
+  bottom: -75px;
+  transform: translateX(-50%);
+  width: min(980px, 92vw);
+  background: white;
+  color: #111;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 12px 30px;
+
+}
+.resultsDiv{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  text-align: left;
+
+}
+
+.label{
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: .08 rem;
+  text-transform: uppercase;
+}
+.resultResponse{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  word-break: break-word;
+}
+
