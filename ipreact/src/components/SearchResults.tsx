@@ -18,6 +18,10 @@ export default function SearchResults ({data}: SearchResultsProps) {
                 <p className="resultResponse">{data.location.city}, {data.location.country}</p>
             </div>
             <div>
+                <h3 className="label">Timezone</h3>
+                <p className="resultResponse">{data.timezone}</p>
+            </div>
+            <div>
                 <h3 className="label">ISP</h3>
                 <p className="resultResponse">{data.isp}</p>
             </div>

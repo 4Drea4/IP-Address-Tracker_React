@@ -9,6 +9,7 @@ lng: number;
     ip: string;
     isp: string;
     location: IpLocation;
+    timezone: string;
  }
 //search bar
 export type SearchBarProps = {

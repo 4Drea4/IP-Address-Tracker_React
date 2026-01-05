@@ -51,27 +51,30 @@ button:focus-visible {
   text-align: center;
   padding: 28px 16px 120px;
   color:white;
-  background-image: urul('./assets/pattern-bg-desktop.png');
+  background-image: urul("./assets/pattern-bg-desktop.png");
   background-size: cover;
   background-position: center;
 }
 .searchForm{
   position: relative;
   width: min(520px, 92vw);
-  margin: 18px;
+  margin: 18px auto 0;
+  
+  
 }
 .searchButton{
-  position: absolute;
+  /* position: absolute; */
   top:0;
   right:0;
   background-color: black;
   color: white;
   width: 50px;
   border-radius: 0 10px 10px 0;
-  height: 45px;
+  height: 35px;
   gap:-10px;
-  margin-left: -40px;
-  padding: 5px;
+  /* margin-left: -40px; */
+  padding: 0px;
+  border:none;
 }
 
 .ipInfo{
@@ -92,16 +95,16 @@ button:focus-visible {
 
 .map{
   height: 100%;
-  width:100% 
+  width:100% ;
 } 
 .mapWrap{
   height: 540px;
   position:relative;
-  z-index: 1;
+  z-index: 0;
 }
 @media (max-width: 600px){
   .hero {
-    background-image: url('./assets/pattern-bg-mobile.png') ;
+    background-image: url("./assets/pattern-bg-mobile.png") ;
   }
 }
 
