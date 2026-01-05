@@ -2,7 +2,8 @@
 ## Andrea E. Friday Jan. 2<sup>nd</sup> 2026
 
 - [Link to the LIVE Project ](https://ip-address-tracker-react-tawny.vercel.app/)<br>
-![LiveProject](ipreact/public/images/LiveImage.png "IP Tracker with React")
+![LiveProject](public/images/LiveImage.png "IP Tracker with React") <br>
+Link: https://ip-address-tracker-react-tawny.vercel.app/ 
 - [Link to FrontEndMentor Project](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0)
 - [Link to Leaflet](https://leafletjs.com/)
 ### Project Scope 
